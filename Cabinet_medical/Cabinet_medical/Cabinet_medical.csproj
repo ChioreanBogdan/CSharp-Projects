@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B99480CF-ECE0-488A-A4CB-52876E4BC299}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cabinet_medical</RootNamespace>
+    <AssemblyName>Cabinet_medical</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ad_cont.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ad_cont.Designer.cs">
+      <DependentUpon>Ad_cont.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ad_istoric.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ad_istoric.Designer.cs">
+      <DependentUpon>Ad_istoric.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ad_med.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ad_med.Designer.cs">
+      <DependentUpon>Ad_med.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ad_Pacient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ad_Pacient.Designer.cs">
+      <DependentUpon>Ad_Pacient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ad_pres1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ad_pres1.Designer.cs">
+      <DependentUpon>Ad_pres1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ad_pres2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ad_pres2.Designer.cs">
+      <DependentUpon>Ad_pres2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Confirmare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirmare.Designer.cs">
+      <DependentUpon>Confirmare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB_Adaugare.cs" />
+    <Compile Include="DB_Interogari.cs" />
+    <Compile Include="DB_Liste.cs" />
+    <Compile Include="DB_Sterge.cs" />
+    <Compile Include="Inc_cabinet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inc_cabinet.Designer.cs">
+      <DependentUpon>Inc_cabinet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meniu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meniu.Designer.cs">
+      <DependentUpon>Meniu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Programare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programare.Designer.cs">
+      <DependentUpon>Programare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DB_Timp.cs" />
+    <Compile Include="Viz_Consult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viz_Consult.Designer.cs">
+      <DependentUpon>Viz_Consult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viz_Pres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viz_Pres.Designer.cs">
+      <DependentUpon>Viz_Pres.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Ad_cont.resx">
+      <DependentUpon>Ad_cont.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ad_istoric.resx">
+      <DependentUpon>Ad_istoric.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ad_med.resx">
+      <DependentUpon>Ad_med.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ad_Pacient.resx">
+      <DependentUpon>Ad_Pacient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ad_pres1.resx">
+      <DependentUpon>Ad_pres1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ad_pres2.resx">
+      <DependentUpon>Ad_pres2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Confirmare.resx">
+      <DependentUpon>Confirmare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inc_cabinet.resx">
+      <DependentUpon>Inc_cabinet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meniu.resx">
+      <DependentUpon>Meniu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programare.resx">
+      <DependentUpon>Programare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Viz_Consult.resx">
+      <DependentUpon>Viz_Consult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viz_Pres.resx">
+      <DependentUpon>Viz_Pres.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E7E59DBA-2028-4E80-B487-CC901D158E03}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RPG</RootNamespace>
+    <AssemblyName>RPG</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abilitati.cs" />
+    <Compile Include="AI_3_lupi.cs" />
+    <Compile Include="DB_Update.cs" />
+    <Compile Include="Ecran_sfarsit_lupta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ecran_sfarsit_lupta.Designer.cs">
+      <DependentUpon>Ecran_sfarsit_lupta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Efecte_defensive.cs" />
+    <Compile Include="Efecte_ofensive.cs" />
+    <Compile Include="Audio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Audio.Designer.cs">
+      <DependentUpon>Audio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Audio_player.cs" />
+    <Compile Include="Bare.cs" />
+    <Compile Include="Buton_personaj.cs" />
+    <Compile Include="Confirmare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirmare.Designer.cs">
+      <DependentUpon>Confirmare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Creare_personaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creare_personaje.Designer.cs">
+      <DependentUpon>Creare_personaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB_Inserari.cs" />
+    <Compile Include="DB_Interogari.cs" />
+    <Compile Include="Harta_lume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Harta_lume.Designer.cs">
+      <DependentUpon>Harta_lume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lupta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lupta.Designer.cs">
+      <DependentUpon>Lupta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mesaj_atac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mesaj_atac.Designer.cs">
+      <DependentUpon>Mesaj_atac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orasel_start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orasel_start.Designer.cs">
+      <DependentUpon>Orasel_start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPG.Designer.cs">
+      <DependentUpon>RPG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setari.Designer.cs">
+      <DependentUpon>Setari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teren_ostil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teren_ostil.Designer.cs">
+      <DependentUpon>Teren_ostil.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Audio.resx">
+      <DependentUpon>Audio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Confirmare.resx">
+      <DependentUpon>Confirmare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creare_personaje.resx">
+      <DependentUpon>Creare_personaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ecran_sfarsit_lupta.resx">
+      <DependentUpon>Ecran_sfarsit_lupta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Harta_lume.resx">
+      <DependentUpon>Harta_lume.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lupta.resx">
+      <DependentUpon>Lupta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mesaj_atac.resx">
+      <DependentUpon>Mesaj_atac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orasel_start.resx">
+      <DependentUpon>Orasel_start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPG.resx">
+      <DependentUpon>RPG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Setari.resx">
+      <DependentUpon>Setari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teren_ostil.resx">
+      <DependentUpon>Teren_ostil.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Engine\Engine.csproj">
+      <Project>{fd565e77-a6c5-4e4c-9f45-0bd8a74ffdf1}</Project>
+      <Name>Engine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sound off.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sound on.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sound on1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sageti\Sageata_dr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sageti\Sageata_st.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sageti\Sageata_an.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sageti\Sageata_fin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rand.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Harti\orasel_start2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Harti\harta_lume.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
